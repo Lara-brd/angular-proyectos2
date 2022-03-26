@@ -1,0 +1,42 @@
+<div class="container-fluid p-0">
+
+  <!-- logo -->
+  <div class="div d-flex align-items-center position-relative justify-content-center p-3">
+    <div class="">
+      <a class="navbar-brand  p-3 d-flex" [routerLink]="['/home']"><img width="200px" src="../assets/img/logo.jpg"> </a>
+    </div>
+    <div class="position-absolute top dcha text-secondary text-white">
+      <h4>{{userName}}</h4>
+    </div>
+
+    <div class="position-absolute dcha d-flex weight-500 auth">
+      <a [routerLink]="['/login']">LOGIN</a>
+      //
+      <a [routerLink]="['/signup']"> SIGNUP</a> 
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand d-flex justify-content-center bg-black border-y p-0 ">
+    <ul id="menu" class="navbar-nav weight-500">
+
+
+      <li class="nav-item active border-x p-2">
+        <a class="nav-link text-secondary m-0 p-0" [routerLink]="['/home']">HOME
+          <hr class="p-0 m-0 transp " routerLinkActive = "lineHome">
+        </a>
+      </li>
+
+
+      <li class="nav-item border-x p-2">
+        <a class="nav-link text-secondary m-0 p-0" [routerLink]="['/starships']" (click)="getShips()">STARSHIPS
+          <hr class="p-0 m-0 transp" routerLinkActive = "lineStarships">
+        </a>
+      </li>
+
+
+
+    </ul>
+  </nav>
+</div>
+

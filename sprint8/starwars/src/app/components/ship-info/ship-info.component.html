@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row d-flex justify-content-center p-3">
+
+
+    <img class="p-0" src = "{{shipInfo.image}}" onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'">
+  </div>
+  <div class="row text-lighter">
+    <div class="col-12 py-3 text-lihter">
+      <h2>{{shipInfo.name}}</h2>
+      <hr>
+    </div>
+
+    <div class="col-md-6">
+      <p><span>Model: </span>{{shipInfo.model}}</p>
+      <p><span>Cost in credits: </span>{{shipInfo.cost_in_credits}}</p>
+      <p>{{shipInfo.max_atmosphering_speed}}</p>
+    </div>
+    <div class="col-md-6">
+      <p><span>Manufacturer: </span>{{shipInfo.manufacturer}}</p>
+      <p><span>Length: </span>{{shipInfo.length}}</p>
+      <p><span>Crew: </span>{{shipInfo.crew}}</p>
+
+    </div>
+  </div>
+  <div *ngIf="pilotsContent">
+    <app-pilots [pilots] ="pilotsArr"></app-pilots>
+  </div>
+</div>
+

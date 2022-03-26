@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url(./assets/img/fondo.png);
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  font-size:1.1rem;
+  background-color:black
+}
+
+.border-y{
+  border-top:1px solid rgb(56, 56, 56);
+  border-bottom:1px solid rgb(56, 56, 56);
+}
+
+.border-x{
+  border-right:1px solid rgb(56, 56, 56);
+  border-left:1px solid rgb(56, 56, 56);
+}
+
+.bg-gray {
+  background-color: rgb(24, 24, 26);
+}
+
+.text-sm {
+  font-size:0.8rem;
+}
+
+.container{
+  max-width: 1000px;
+}
+
+.text-graylight{
+  color: #4c4c4c;
+}
+.text-lighter{
+  color: #8d8d8d;
+}
+.container{
+  max-width: 1000px;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+
+
+// /////////auth styles/////////@at-root
+.auth-content {
+  background-color: #181818;
+  max-width:600px;
+  margin:0 auto;
+}
+
+.success-color{
+  color:#f6cb34;
+}
+.auth-title{
+  font-weight: 300;
+  font-size:2rem;
+}
+
+.auth-text{
+  font-size:1.3rem;
+}
+
+//TODO cambiar color placeholder
+.form-control:focus {
+  border-color: #f6cb34;
+  box-shadow: none;
+  background-color: rgb(85, 85, 85);
+}
+.form-control:focus::placeholder{
+  color:white;
+}
+
+.mybtn {
+  background-color: white;
+  margin:10px;
+  width: 95%;
+  margin: 0 auto;
+  background-color:  rgb(85, 85, 85);
+  color:white;
+}
+
+a{
+  text-decoration: none;
+}
+
+.text-policy{
+  color:rgb(85, 85, 85);
+  font-size: .8rem;
+}
+
+.notvalidated {
+  font-size:.9rem;
+}

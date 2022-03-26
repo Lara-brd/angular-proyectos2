@@ -1,0 +1,33 @@
+<div class="auth-content rounded p-4 mt-4">
+  <div class="div d-flex justify-content-between p-3 align-items-center">
+    <h4 class="auth-title p-4 success-color">SING IN</h4>    <img class="align-self-end p-3" width="180px" src="../../../assets/img/pngegg-am.png" alt="starwars logo">
+  </div>
+
+  <form>
+    <div class="form-group p-3">
+
+      <input type="text" [(ngModel)]="username" name ="username" class="form-control focusedInput" placeholder="Username" autofocus>
+    </div>
+
+    <div class="form-group p-3">
+      <input type="password" [(ngModel)]="password" name ="password" class="form-control" placeholder="Password">
+    </div>
+
+    <div class="row p-3">
+      <button type="button" class="btn btn mybtn" (click)="login()">Submit</button>
+    </div>
+
+  </form>
+
+
+  <a class="text-center success-color auth-text mt-4" [routerLink]="['/signup']"><p class="text-center p-2"> Not registered yet?</p></a>
+
+</div>
+
+
+
+
+
+
+
+

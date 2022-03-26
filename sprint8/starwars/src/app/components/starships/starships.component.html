@@ -1,0 +1,26 @@
+
+<div class="container-fluid">
+    <div class="container p-4">
+      <div class="list-group" >
+
+        <!-- Recogemos la URL de la nave -->
+        <div class="list-group-item m-2 p-3 rounded bg-gray" *ngFor="let ship of ships">
+        <a (click) = "getId(ship.url)">
+              <div>
+                <h5>{{ship.name}}</h5>
+                <p>{{ship.model}}</p>
+              </div>
+            </a>
+        </div>
+
+      </div>
+
+      <div *ngIf ="loaded" class="d-flex justify-content-end p-2">
+        <button type ="button" class="btn btn-next" (click) ="next()">View More <fa-icon [icon] ="angleRight"></fa-icon> </button>
+      </div>
+    </div>
+
+  </div>
+
+
+
