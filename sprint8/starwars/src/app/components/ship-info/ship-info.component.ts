@@ -20,11 +20,14 @@ export class ShipInfoComponent implements OnInit {
     manufacturer:'',
     length:'',
     crew:'',
-    pilots:[]
+    pilots:[], 
+    films:[]
   }
 
   pilotsArr:any[] =[];
+  filmsArr:any[]=[];
   pilotsContent:boolean = false;
+  filmsContent:boolean = false;
 
   constructor(
     private route:ActivatedRoute,
@@ -61,10 +64,12 @@ export class ShipInfoComponent implements OnInit {
         this.shipInfo.length = ship.length;
         this.shipInfo.crew = ship.crew;
         this.shipInfo.pilots = ship.pilots;
+        this.shipInfo.films = ship.films;
       }
     });
     this.getPilotInfo();
-  }
+    this.getFilmsInfo();
+    }
 
   getPilotInfo(){
     this.shipInfo.pilots.forEach(pilot =>{
@@ -75,6 +80,18 @@ export class ShipInfoComponent implements OnInit {
         }
       });
     });
+  }
+
+  getFilmsInfo(){
+    this.shipInfo.films.forEach(film =>{
+      this._shipService.getInfo(film).subscribe(flm =>{
+        this.filmsArr.push(flm);
+        if(this.filmsArr.length > 0){
+          this.filmsContent = true;
+        }
+      });
+    });
+    console.log(this.filmsArr);
   }
 
   //get image

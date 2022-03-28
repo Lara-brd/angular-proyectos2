@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 
 //components
@@ -17,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ShipInfoComponent } from './components/ship-info/ship-info.component';
 import { PilotsComponent } from './components/ship-info/pilots/pilots.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { FilmsComponent } from './components/ship-info/films/films.component';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     WelcomeComponent,
     LoginComponent,
     SignupComponent,
+    FilmsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     routing,
     HttpClientModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

@@ -19,8 +19,8 @@ const appRoutes:Routes = [
     path: 'starships', component:StarshipsComponent,
     canActivate: [AuthGuard]
   },
-  {path: 'login', component:LoginComponent},
-  {path: 'signup', component:SignupComponent},
+  {path: 'login', component:LoginComponent, data: {animation: 'isRight'}},
+  {path: 'signup', component:SignupComponent, data: {animation: 'isLeft'}},
   {path: '**', component:HomeComponent},
 ]
 
